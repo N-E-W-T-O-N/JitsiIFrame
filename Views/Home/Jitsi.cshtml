@@ -1,0 +1,33 @@
+﻿
+@{
+    ViewData["Title"] = "Jitsi";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<div id="meet">
+
+</div>
+</body>
+<script src='https://vicios.centralindia.cloudapp.azure.com/external_api.js' allow="camera; microphone; display-capture; autoplay; clipboard-write;"></script>
+<script>
+        //const domain = "meet.jit.si";
+    const domain = "vicios.centralindia.cloudapp.azure.com";
+    const options = {
+      roomName: "JitsiMeetExample",
+      width: 900,
+      height: 700,
+      parentNode: document.querySelector("#meet"),
+      lang: "en",
+    };
+    const api = new JitsiMeetExternalAPI(domain, options);
+</script>
+@*<script src="js/jitsi.js" type="text/javascript"></script> *@
+</html>
+
