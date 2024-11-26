@@ -8,6 +8,7 @@ const options = {
         //email: user.email,
         displayName: user.display_name
     },
+
     configOverwrite: {
         disableDeepLinking: true,
     },

@@ -28,6 +28,11 @@ namespace JitsiIFrame.Controllers
             return View();
         }
 
+        public IActionResult JitsiIFrame()
+        {
+            return View();
+        }
+
         public IActionResult JitsiWeb()
         {
             return View();

@@ -37,12 +37,12 @@
 
         function checkPermissionsAndStart() {
             navigator.mediaDevices.getUserMedia({ audio: true, video: true })
-                .then(function (stream) {
+                .then(function(stream) {
                     // Stop the stream immediately, we don't need to keep it
                     stream.getTracks().forEach(track => track.stop());
                     startMeeting();
                 })
-                .catch(function (err) {
+                .catch(function(err) {
                     console.error(err);
                     document.getElementById('nameForm').style.display = 'none';
                     document.getElementById('permissionDenied').style.display = 'block';
@@ -61,18 +61,10 @@
                     height: 700,
                     parentNode: document.querySelector("#meet"),
                     lang: "en",
-                    
                     userInfo: {
                         displayName: userName
                     }
                 };
-
-                if (userName.toUpperCase() === 'ABC') {
-                    options.userInfo.role = 'moderator';
-                }
-                else {
-                    options.userInfo.role = 'participant';
-                }
 
                 api = new JitsiMeetExternalAPI(domain, options);
             } else {
